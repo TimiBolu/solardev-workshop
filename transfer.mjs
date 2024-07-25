@@ -9,7 +9,7 @@ import {
 import walletKey from "./wallet.json" assert { type: "json" };
 import { airdropYourAccount } from "./airdrop.mjs";
 
-const to = new PublicKey("FMQ8C1i54fvedewRUDZntQSWtGkZX7jPcSrPdMS7rt5X");
+const to = new PublicKey("D5EcfvzUYRMfgb99gQ6ipTXJRWMPZxyJM4u9f1LG7Lt");
 const from = Keypair.fromSecretKey(new Uint8Array(walletKey));
 
 const connection = new Connection("https://api.devnet.solana.com", "confirmed");
