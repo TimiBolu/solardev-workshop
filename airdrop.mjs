@@ -28,5 +28,5 @@ export const airdropYourAccount = async () => {
   console.log({
     res,
   });
-  return !!res.value.err;
+  return !res.value.err;
 };
