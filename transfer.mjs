@@ -9,5 +9,9 @@ console.log({ toWallet, fromWallet });
 const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
 const transfer = async () => {
-  const balance = connection.getBalance(fromWallet.publicKey);
+  const balance = await connection.getBalance(fromWallet.publicKey);
+  console.log({ balance });
+  if (balance == 0) {
+  }
 };
+transfer();
