@@ -19,11 +19,11 @@ const transfer = async () => {
   const balance = await connection.getBalance(from.publicKey);
   console.log({ balance });
 
-  let canAirDropBalance = false;
+  let cannotAirDropBalance = true;
   if (balance === 0) {
     console.log(`OGA YOU DON'T HAVE MONEY!!!`);
-    canAirDropBalance = await airdropYourAccount();
-    if (!canAirDropBalance) return;
+    cannotAirDropBalance = await airdropYourAccount();
+    if (cannotAirDropBalance) return;
   } 
   
   const transaction = new Transaction().add(
