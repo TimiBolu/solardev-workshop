@@ -7,7 +7,7 @@ import {
   Transaction,
 } from "@solana/web3.js";
 import { airdropYourAccount } from "./airdrop.js";
-import { KRecipientPublicKey, KWalletKey } from "./constants";
+import { KRecipientPublicKey, KWalletKey } from "./constants.js";
 
 const to = KRecipientPublicKey;
 const from = Keypair.fromSecretKey(KWalletKey);
