@@ -6,11 +6,11 @@ import {
   SystemProgram,
   Transaction,
 } from "@solana/web3.js";
-import walletKey from "./wallet.json" assert { type: "json" };
-import { airdropYourAccount } from "./airdrop.mjs";
+import { airdropYourAccount } from "./airdrop.js";
+import { KRecipientPublicKey, KWalletKey } from "./constants";
 
-const to = new PublicKey("D5EcfvzUYRMfgb99gQ6ipTXJRWMPZxyJM4u9f1LG7Lt");
-const from = Keypair.fromSecretKey(new Uint8Array(walletKey));
+const to = KRecipientPublicKey;
+const from = Keypair.fromSecretKey(KWalletKey);
 
 const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 console.log({ to, from });
